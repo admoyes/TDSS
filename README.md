@@ -1,7 +1,7 @@
 # Unsupervised Deep Learning for Stain Separation and Artifact Detection in Histopathology Images
 This repository contains a PyTorch implementation of the stain separation model proposed in [this paper](https://link.springer.com/chapter/10.1007/978-3-030-52791-4_18). This paper was presented at [MIUA2020](https://miua2020.com/) and won the *best paper award*. A video summary of this paper can be found [here](https://www.youtube.com/watch?v=HQ6kL6eVdig).
 
-The TDSS model uses a U-Net convolutional neural network to capture texture, structure and colour features from tissue images. This information is then used to estimate the stain colours and densities. This model (TDSS) is based on a modified approach to Non-negative Matrix Factorisation where a stain colour matrix is estimated for every pixel location. It was found that allowing the stain colours to vary at each pixel location, improved stain separation results are found.
+The Tissue-Dependent Stain Separation (TDSS) model uses a U-Net convolutional neural network to capture texture, structure and colour features from tissue images. This information is then used to estimate the stain colours and densities. This model (TDSS) is based on a modified approach to Non-negative Matrix Factorisation where a stain colour matrix is estimated for every pixel location. It was found that allowing the stain colours to vary at each pixel location, improved stain separation results are found.
 
 ## Getting Started
 - Our local environment is a typical conda environment
