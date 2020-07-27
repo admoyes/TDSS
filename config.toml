@@ -1,0 +1,34 @@
+device = "cuda:0"
+
+[data]
+incident_light = [0.75, 0.75, 0.75] # colour of the incident light [R, G, B]. this is the average colour of background pixels (no tissue).
+
+[training_data]
+path_to_patches = ""
+use_custom_transform = false
+batch_size = 32
+num_workers = 4
+patch_size = 128
+
+[testing_data]
+path_to_patches = ""
+use_custom_transform = false
+batch_size = 32
+num_workers = 4
+
+[feature_extraction]
+force_training = false # if false, training will be skipped (path_to_state will be assumed)
+path_to_state = "./.cache/feature_extraction.state" # if pre-trained state exists, put the path in here
+input_channels = 3 # 3 if RGB image
+multiplier = 16 # base number of features. feature model will output this many channels
+num_blocks = 3 # number of convolutional blocks in the encoder and decoder
+learning_rate = 0.0002
+training_epochs = 500 # how many epochs to train for
+
+[stain_separation]
+number_of_stains = 2 # H+E
+alpha=0.05 # clipping of colour offset values
+sparsity_weight = 0.05 # weighting of the sparsity loss
+training_epochs = 5000
+learning_rate = 0.0002
+path_to_state = "./.cache/stain_separation.state"
