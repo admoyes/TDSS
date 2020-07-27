@@ -11,7 +11,7 @@ The Tissue-Dependent Stain Separation (TDSS) model uses a U-Net convolutional ne
 	- Specific versions can be found in the `requirements.txt` file
 
 ### Training
-- Ensure the `path_to_patches` paramter in `config.toml` under `training_data` points to a directory that is populated with tissue image patches
+- Ensure the `path_to_patches` parameter in `config.toml` under `training_data` points to a directory that is populated with tissue image patches
 	- The model was originally trained with 128x128 pixel patches but this is not hard coded (See config)
 - Run `python main.py`
 - Model output will be output at `./output/training/`
@@ -19,7 +19,7 @@ The Tissue-Dependent Stain Separation (TDSS) model uses a U-Net convolutional ne
 ### Testing
 - Again, ensure the `path_to_patches` parameter in `config.toml` under `testing_data` is populated with tissue image patches.
 - Run `python test.py`
-- Model output will be saved to disk at `./output/testing/*`
+- Model output will be saved to disk at `./output/testing/`
 
 	- Configuration is done in `config.toml`
 - To test the model, run `python test.py`
